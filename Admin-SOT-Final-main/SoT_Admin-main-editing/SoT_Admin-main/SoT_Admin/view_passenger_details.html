@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Passenger admin home poge</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <ion-icon name="person-circle-outline"></ion-icon> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header class="flex justify-between">
+      <div class="logo">
+        <a href="#"><img src="./sot_logo.jpg" width="80px" height="70px" /></a>
+      </div>
+      <nav class="navigation">
+        <!-- <a href="#" style="z-index: 100">Help</a>
+        <a href="#" style="z-index: 100">Contact Us</a> -->
+      </nav>
+    </header>
+
+    <div class="search-box">
+      <input type="text" name="" id="myInput" placeholder="Search Passenger...." onkeyup="searchFun()">
+    </div>
+
+    <div class="container">
+      <table class="table-auto border-collapse" id="myTable">
+        <thead>
+          <tr>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Passenger ID</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Name</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Destination</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Stop Number</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Fare Amount</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Mode of Payment</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Transaction Date/Time</th>
+            
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+      </div>
+
+      
+    </div>
+
+    <script src="script_passenger_details_pg.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+
+      const searchFun = () =>{
+        let filter = document.getElementById('myInput').value.toUpperCase();
+
+        let myTable = document.getElementById('myTable');
+
+        let tr =  myTable.getElementsByTagName('tr');
+
+        for(var i=0; i<tr.length; i++){
+          let td = tr[i].getElementsByTagName('td')[1];
+
+          if(td){
+            let textvalue = td.textContent;
+
+            if(textvalue.toUpperCase().indexOf(filter) > -1){
+              tr[1].style.display = "";
+            }
+            else{
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+
+    </script>
+
+
+  </body>
+</html>

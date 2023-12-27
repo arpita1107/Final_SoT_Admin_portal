@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report of all stations</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <ion-icon name="person-circle-outline"></ion-icon> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header class="flex justify-between">
+      <div class="logo">
+        <a href="#"><img src="./sot_logo.jpg" width="80px" height="70px" /></a>
+      </div>
+      <nav class="navigation">
+        <a href="#" style="z-index: 100">Help</a>
+        <a href="#" style="z-index: 100">Contact Us</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <table class="table-auto border-collapse">
+        <thead>
+          <tr>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Train ID</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Train Station</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Earnings (JPY)</th>
+            <th class="border border-2 p-3 bg-[#480374] text-[#fff]">Total Passengers</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+      </div>
+
+      
+    </div>
+
+    <script src="script_all_station_report.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
